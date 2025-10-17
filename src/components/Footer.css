@@ -1,160 +1,195 @@
 /* Place this file at: src/components/Footer.css */
 
 .footer {
-  background-color: var(--color-dark);
-  color: var(--color-white);
-  padding: var(--spacing-2xl) 0 var(--spacing-md);
+  background-color: #1F2937;
+  color: #9CA3AF;
+  padding: 3rem 0 1.5rem;
   margin-top: auto;
 }
 
 .footer-content {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: var(--spacing-xl);
-  margin-bottom: var(--spacing-xl);
+  grid-template-columns: 2fr 1fr 1.5fr;
+  gap: 3rem;
+  margin-bottom: 2rem;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-.footer-section h3 {
-  color: var(--color-primary);
-  margin-bottom: var(--spacing-xs);
-}
-
-.footer-section h4 {
-  color: var(--color-white);
-  font-size: var(--font-size-large);
-  margin-bottom: var(--spacing-sm);
-}
-
-.footer-section h5 {
-  color: var(--color-gold);
-  font-size: var(--font-size-base);
-  margin-bottom: var(--spacing-xs);
-  margin-top: var(--spacing-md);
+/* Brand Section */
+.footer-brand {
+  max-width: 350px;
 }
 
 .footer-logo {
   display: flex;
   align-items: center;
-  gap: var(--spacing-sm);
-  margin-bottom: var(--spacing-sm);
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.footer-logo h3 {
+  color: var(--color-white);
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin: 0;
 }
 
 .footer-tagline {
-  color: var(--color-gold);
+  color: #D1D5DB;
+  font-size: 0.875rem;
+  font-weight: 500;
+  margin-bottom: 0.75rem;
   font-style: italic;
-  margin-bottom: var(--spacing-xs);
-  font-size: var(--font-size-small);
 }
 
 .footer-desc {
-  color: var(--color-gray);
-  font-size: var(--font-size-small);
+  color: #9CA3AF;
+  font-size: 0.9rem;
   line-height: 1.6;
-}
-
-.footer-links {
-  list-style: none;
-  padding: 0;
-}
-
-.footer-links li {
-  margin-bottom: var(--spacing-xs);
-}
-
-.footer-links a {
-  color: var(--color-gray);
-  font-size: var(--font-size-base);
-  transition: var(--transition);
-}
-
-.footer-links a:hover {
-  color: var(--color-primary);
-  padding-left: 5px;
-}
-
-.contact-info {
-  list-style: none;
-  padding: 0;
-}
-
-.contact-info li {
-  display: flex;
-  align-items: center;
-  gap: var(--spacing-xs);
-  margin-bottom: var(--spacing-sm);
-  color: var(--color-gray);
-  font-size: var(--font-size-small);
-}
-
-.contact-info svg {
-  color: var(--color-primary);
-  flex-shrink: 0;
+  margin-bottom: 1.5rem;
 }
 
 .social-links {
   display: flex;
-  gap: var(--spacing-sm);
-  margin-bottom: var(--spacing-md);
+  gap: 0.75rem;
 }
 
 .social-links a {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 45px;
-  height: 45px;
-  background-color: var(--color-primary);
-  border-radius: 50%;
-  transition: var(--transition);
-}
-
-.social-links a:hover {
-  background-color: var(--color-gold);
-  transform: translateY(-3px);
-}
-
-.social-links svg {
+  width: 38px;
+  height: 38px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 6px;
+  transition: all 0.2s ease;
   color: var(--color-white);
 }
 
-.training-schedule p {
-  color: var(--color-gray);
-  font-size: var(--font-size-small);
-  margin-bottom: var(--spacing-xs);
+.social-links a:hover {
+  background-color: var(--color-primary);
+  transform: translateY(-2px);
 }
 
+/* Footer Sections */
+.footer-section h4 {
+  color: var(--color-white);
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 1.25rem;
+}
+
+.footer-section h5 {
+  color: #D1D5DB;
+  font-size: 0.9rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  margin-top: 1.5rem;
+}
+
+.footer-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-links li {
+  margin-bottom: 0.75rem;
+}
+
+.footer-links a {
+  color: #9CA3AF;
+  font-size: 0.9rem;
+  transition: color 0.2s ease;
+  text-decoration: none;
+}
+
+.footer-links a:hover {
+  color: var(--color-white);
+}
+
+/* Contact Info */
+.contact-info {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.contact-info li {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+  color: #9CA3AF;
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+.contact-info svg {
+  color: var(--color-primary);
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.contact-info a {
+  color: #9CA3AF;
+  text-decoration: none;
+  transition: var(--transition);
+}
+
+.contact-info a:hover {
+  color: var(--color-white);
+  text-decoration: underline;
+}
+
+.training-hours p {
+  color: #9CA3AF;
+  font-size: 0.875rem;
+  margin: 0.25rem 0;
+  line-height: 1.5;
+}
+
+/* Footer Bottom */
 .footer-bottom {
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
-  padding-top: var(--spacing-md);
   text-align: center;
+  padding-top: 1.5rem;
 }
 
 .footer-bottom p {
-  color: var(--color-gray);
-  font-size: var(--font-size-small);
-  margin-bottom: var(--spacing-xs);
+  color: #6B7280;
+  font-size: 0.875rem;
+  margin: 0.25rem 0;
+}
+
+.footer-credit {
+  margin-top: 0.5rem;
+}
+
+.credit-link {
+  color: var(--color-primary);
+  font-weight: 600;
+  text-decoration: none;
+  transition: var(--transition);
+}
+
+.credit-link:hover {
+  color: var(--color-white);
+  text-decoration: underline;
 }
 
 /* Responsive */
 @media (max-width: 768px) {
   .footer-content {
     grid-template-columns: 1fr;
-    gap: var(--spacing-lg);
+    gap: 2rem;
   }
 
-  .footer-logo {
-    justify-content: center;
+  .footer-brand {
+    max-width: 100%;
   }
 
-  .footer-section {
-    text-align: center;
-  }
-
-  .contact-info li {
-    justify-content: center;
-  }
-
-  .social-links {
-    justify-content: center;
+  .footer-section h4 {
+    font-size: 1.1rem;
   }
 }

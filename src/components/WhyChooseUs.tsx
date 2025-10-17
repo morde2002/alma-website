@@ -1,50 +1,62 @@
 // Place this file at: src/components/WhyChooseUs.tsx
 
-import { Shield, Heart, Trophy, Users } from 'lucide-react'
+import { Shield, Trophy, Target, Users, Sparkles, Heart } from 'lucide-react'
 import './WhyChooseUs.css'
 
-interface Reason {
+interface Benefit {
   icon: JSX.Element
   title: string
   description: string
 }
 
 export default function WhyChooseUs(): JSX.Element {
-  const reasons: Reason[] = [
+  const benefits: Benefit[] = [
     {
-      icon: <Shield size={40} />,
-      title: "Safe Environment",
-      description: "An exclusive all-ladies space where women can train comfortably and confidently without judgment."
+      icon: <Shield size={28} />,
+      title: "Women-Only Safe Space",
+      description: "Train in a comfortable, judgment-free environment designed exclusively for women. Build confidence without intimidation."
     },
     {
-      icon: <Trophy size={40} />,
-      title: "Expert Training",
-      description: "Learn from Salma Ali, Kenya's national team captain and international medalist with years of experience."
+      icon: <Trophy size={28} />,
+      title: "Learn from a Champion",
+      description: "Train directly with Salma Ali Abdallah, Kenya's National Team Captain and World Championship Bronze Medalist."
     },
     {
-      icon: <Heart size={40} />,
-      title: "Holistic Approach",
-      description: "Our training philosophy focuses on physical strength, mental peace, and disciplined character development."
+      icon: <Target size={28} />,
+      title: "Real Self-Defense Skills",
+      description: "Master practical self-defense techniques for real-world situations. Empower yourself with skills that matter."
     },
     {
-      icon: <Users size={40} />,
-      title: "Supportive Community",
-      description: "Join a sisterhood of empowered women who motivate and support each other's growth journey."
+      icon: <Users size={28} />,
+      title: "Founding Community",
+      description: "Join our founding members and help build Mombasa's premier women's martial arts community from the ground up."
+    },
+    {
+      icon: <Sparkles size={28} />,
+      title: "Path to Competition",
+      description: "Aspire to compete? Access training for regional, national, and international Tong-Il Moo-Do championships."
+    },
+    {
+      icon: <Heart size={28} />,
+      title: "Holistic Empowerment",
+      description: "Beyond physical training, build mental strength, discipline, and inner peace through martial arts philosophy."
     }
   ]
 
   return (
     <section className="why-section section">
       <div className="container">
-        <h2 className="section-title">Why Choose ALMA</h2>
-        <p className="section-subtitle">Experience the difference of training with Mombasa's premier all-ladies martial arts academy</p>
+        <h2 className="section-title">Why Train at ALMA?</h2>
+        <p className="section-subtitle">
+          More than martial arts, a movement for women&apos;s empowerment in Mombasa
+        </p>
 
-        <div className="reasons-grid">
-          {reasons.map((reason, index) => (
-            <div key={index} className="reason-card">
-              <div className="reason-icon">{reason.icon}</div>
-              <h3 className="reason-title">{reason.title}</h3>
-              <p className="reason-description">{reason.description}</p>
+        <div className="benefits-grid">
+          {benefits.map((benefit, index) => (
+            <div key={index} className="benefit-card">
+              <div className="benefit-icon">{benefit.icon}</div>
+              <h3 className="benefit-title">{benefit.title}</h3>
+              <p className="benefit-description">{benefit.description}</p>
             </div>
           ))}
         </div>

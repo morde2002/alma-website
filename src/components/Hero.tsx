@@ -7,40 +7,66 @@ import './Hero.css'
 export default function Hero(): JSX.Element {
   return (
     <section className="hero">
-      <div className="hero-overlay"></div>
-      <div className="container hero-container">
-        <div className="hero-content">
-          <h1 className="hero-title">Empower Yourself Through Martial Arts</h1>
-          <p className="hero-subtitle">Join Mombasa's premier all-ladies martial arts academy</p>
-          <p className="hero-tagline">The Triad of Strength, Peace & Discipline</p>
-          <div className="hero-buttons">
-            <Link href="/contact" className="btn btn-primary">Register Now</Link>
-            <Link href="/about" className="btn btn-secondary">Learn More</Link>
+      <div className="container">
+        <div className="hero-grid">
+          <div className="hero-content">
+            <div className="hero-badge">Founded by Kenya&apos;s National Champion</div>
+            <h1 className="hero-title">Empower Yourself Through Martial Arts</h1>
+            <p className="hero-description">
+              Join Mombasa&apos;s premier women-only martial arts academy. Train with World Championship 
+              Bronze Medalist Salma Ali Abdallah and build strength, confidence, and real self-defense skills.
+            </p>
+            
+            <div className="hero-features">
+              <div className="feature-item">
+                <span className="feature-icon">🥉</span>
+                <span>World Championship Bronze Medalist</span>
+              </div>
+              <div className="feature-item">
+                <span className="feature-icon">🏆</span>
+                <span>5x Gold Medalist</span>
+              </div>
+              <div className="feature-item">
+                <span className="feature-icon">🇰🇪</span>
+                <span>Kenya National Team Captain</span>
+              </div>
+            </div>
+
+            <div className="hero-buttons">
+              <Link href="/contact" className="btn btn-primary">
+                Book Your FREE Trial Class
+              </Link>
+              <Link href="/about" className="btn btn-secondary">
+                Meet Your Trainer
+              </Link>
+            </div>
+
+            <div className="hero-info">
+              <div className="info-box">
+                <span className="info-label">Training Days</span>
+                <span className="info-value">Mon, Wed, Fri</span>
+              </div>
+              <div className="info-box">
+                <span className="info-label">Time</span>
+                <span className="info-value">6:00 PM - 7:30 PM</span>
+              </div>
+              <div className="info-box">
+                <span className="info-label">Location</span>
+                <span className="info-value">Swahilipot Hub, Mombasa</span>
+              </div>
+            </div>
           </div>
-          <div className="hero-info">
-            <div className="info-item">
-              <p className="info-label">Training Days</p>
-              <p className="info-value">Mon, Wed, Fri</p>
-            </div>
-            <div className="info-item">
-              <p className="info-label">Time</p>
-              <p className="info-value">6:00 PM - 7:30 PM</p>
-            </div>
-            <div className="info-item">
-              <p className="info-label">Location</p>
-              <p className="info-value">Swahilipot Hub</p>
-            </div>
+
+          <div className="hero-image">
+            <Image 
+              src="/images/salma-hero.jpg" 
+              alt="Salma Ali Abdallah - Kenya National Champion" 
+              width={500} 
+              height={600}
+              priority
+              className="hero-img"
+            />
           </div>
-        </div>
-        <div className="hero-image">
-          <Image 
-            src="/images/salma-hero.jpg" 
-            alt="Salma Ali in action" 
-            width={500} 
-            height={600}
-            priority
-            className="hero-img"
-          />
         </div>
       </div>
     </section>

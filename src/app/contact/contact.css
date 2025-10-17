@@ -1,0 +1,439 @@
+/* Place this file at: src/app/contact/contact.css */
+
+.contact-hero {
+  background-color: var(--color-light-gray);
+  padding: 4rem 0 3rem;
+  text-align: center;
+}
+
+.page-title {
+  font-size: 2.5rem;
+  color: var(--color-dark);
+  margin-bottom: 1rem;
+}
+
+.page-subtitle {
+  font-size: 1.125rem;
+  color: var(--color-gray);
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.contact-section {
+  background-color: var(--color-white);
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+}
+
+.contact-info-section {
+  max-width: 500px;
+}
+
+.contact-info-title {
+  font-size: 2rem;
+  color: var(--color-dark);
+  margin-bottom: 1rem;
+}
+
+.contact-info-text {
+  font-size: 1rem;
+  color: var(--color-gray);
+  line-height: 1.7;
+  margin-bottom: 2rem;
+}
+
+.contact-details {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.contact-detail-item {
+  display: flex;
+  gap: 1rem;
+  padding: 1.5rem;
+  background-color: var(--color-light-gray);
+  border-radius: var(--border-radius);
+  border: 1px solid var(--color-border);
+}
+
+.detail-icon {
+  width: 50px;
+  height: 50px;
+  background-color: var(--color-primary);
+  border-radius: var(--border-radius);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-white);
+  flex-shrink: 0;
+}
+
+.detail-content h4 {
+  font-size: 1rem;
+  color: var(--color-dark);
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+.detail-content p,
+.detail-content a {
+  font-size: 0.95rem;
+  color: var(--color-gray);
+  margin-bottom: 0.25rem;
+  text-decoration: none;
+  transition: var(--transition);
+}
+
+.detail-content a:hover {
+  color: var(--color-primary);
+  text-decoration: underline;
+}
+
+.detail-note {
+  font-size: 0.875rem !important;
+  color: var(--color-gray) !important;
+  opacity: 0.8;
+}
+
+.contact-form-section {
+  background-color: var(--color-light-gray);
+  padding: 2.5rem;
+  border-radius: var(--border-radius);
+  border: 1px solid var(--color-border);
+}
+
+.form-title {
+  font-size: 1.75rem;
+  color: var(--color-dark);
+  margin-bottom: 1.5rem;
+}
+
+.success-message-bottom,
+.error-message-bottom {
+  margin-top: 1.5rem;
+  padding: 1.25rem;
+  border-radius: var(--border-radius);
+  text-align: center;
+  animation: slideIn 0.3s ease-out;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.success-message-bottom {
+  background-color: #10b981;
+  color: var(--color-white);
+  border: 2px solid #059669;
+}
+
+.success-message-bottom p {
+  margin: 0;
+  color: var(--color-white);
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1.6;
+}
+
+.refresh-note {
+  margin-top: 0.5rem !important;
+  font-size: 0.875rem !important;
+  opacity: 0.9;
+}
+
+.error-message-bottom {
+  background-color: #ef4444;
+  color: var(--color-white);
+  border: 2px solid #dc2626;
+}
+
+.error-message-bottom p {
+  margin: 0;
+  color: var(--color-white);
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1.6;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.form-group label {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--color-dark);
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  padding: 0.875rem;
+  font-size: 1rem;
+  border: 1px solid var(--color-border);
+  border-radius: var(--border-radius);
+  font-family: var(--font-primary);
+  background-color: var(--color-white);
+  color: var(--color-dark);
+  transition: var(--transition);
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 3px rgba(233, 30, 140, 0.1);
+}
+
+/* Email Validation Styles */
+.input-with-validation {
+  position: relative;
+}
+
+.input-with-validation input {
+  padding-right: 3rem;
+}
+
+.input-error {
+  border-color: #ef4444 !important;
+}
+
+.input-success {
+  border-color: #10b981 !important;
+}
+
+.validation-icon {
+  position: absolute;
+  right: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  align-items: center;
+}
+
+.validation-icon.success {
+  color: #10b981;
+}
+
+.validation-icon.error {
+  color: #ef4444;
+}
+
+.validation-icon.checking {
+  font-size: 1.125rem;
+}
+
+.validation-message {
+  font-size: 0.875rem;
+  margin-top: 0.5rem;
+  margin-bottom: 0;
+}
+
+.validation-message.success {
+  color: #10b981;
+}
+
+.validation-message.error {
+  color: #ef4444;
+}
+
+/* Phone Input Styles - Add validation wrapper */
+.phone-input-container {
+  width: 100%;
+}
+
+.phone-input-wrapper {
+  position: relative;
+}
+
+.phone-validation-icon {
+  position: absolute;
+  right: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  align-items: center;
+  pointer-events: none;
+  z-index: 2;
+}
+
+.phone-validation-icon.success {
+  color: #10b981;
+}
+
+.phone-validation-icon.error {
+  color: #ef4444;
+}
+
+.react-tel-input .flag-dropdown {
+  background-color: transparent !important;
+  border: none !important;
+  border-right: 1px solid var(--color-border) !important;
+  min-width: 80px !important;
+}
+
+.react-tel-input .selected-flag {
+  padding: 0 8px 0 12px !important;
+  min-width: 80px !important;
+  width: 80px !important;
+  background-color: transparent !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: flex-start !important;
+}
+
+.react-tel-input .selected-flag .flag {
+  margin-right: 8px !important;
+}
+
+.react-tel-input .selected-flag .arrow {
+  margin-left: auto !important;
+}
+
+.react-tel-input .selected-flag:hover,
+.react-tel-input .selected-flag:focus {
+  background-color: var(--color-light-gray) !important;
+}
+
+/* Target input field with MAXIMUM specificity */
+.phone-input-wrapper .react-tel-input .form-control,
+.phone-input-wrapper .react-tel-input input[type="tel"],
+.react-tel-input .form-control,
+.react-tel-input input[type="tel"],
+.phone-input-field,
+input.phone-input-field,
+.react-tel-input input.form-control {
+  width: 100% !important;
+  height: 50px !important;
+  padding-left: 90px !important;
+  padding-right: 3rem !important;
+  font-size: 1rem !important;
+  border: 1px solid var(--color-border) !important;
+  border-radius: var(--border-radius) !important;
+  font-family: var(--font-primary) !important;
+  background-color: var(--color-white) !important;
+  color: var(--color-dark) !important;
+  transition: var(--transition) !important;
+  box-sizing: border-box !important;
+}
+
+.phone-input-wrapper .react-tel-input .form-control:focus,
+.react-tel-input .form-control:focus,
+.react-tel-input input[type="tel"]:focus,
+.phone-input-field:focus {
+  outline: none !important;
+  border-color: var(--color-primary) !important;
+  box-shadow: 0 0 0 3px rgba(233, 30, 140, 0.1) !important;
+}
+
+.phone-input-button {
+  background-color: transparent !important;
+  border: none !important;
+  border-right: 1px solid var(--color-border) !important;
+  padding: 0 8px 0 12px !important;
+  height: 50px !important;
+  display: flex !important;
+  align-items: center !important;
+  min-width: 80px !important;
+  width: 80px !important;
+}
+
+.phone-input-button:hover {
+  background-color: var(--color-light-gray) !important;
+}
+
+.phone-input-dropdown {
+  background-color: var(--color-white) !important;
+  border: 1px solid var(--color-border) !important;
+  border-radius: var(--border-radius) !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1) !important;
+  max-height: 300px !important;
+  overflow-y: auto !important;
+}
+
+.phone-input-search {
+  padding: 0.75rem !important;
+  border: 1px solid var(--color-border) !important;
+  border-radius: var(--border-radius) !important;
+  margin: 0.5rem !important;
+  font-size: 0.95rem !important;
+  font-family: var(--font-primary) !important;
+}
+
+.phone-input-search:focus {
+  outline: none !important;
+  border-color: var(--color-primary) !important;
+}
+
+.phone-note {
+  font-size: 0.8125rem;
+  color: var(--color-gray);
+  margin-top: 0.5rem;
+  margin-bottom: 0;
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.btn-submit {
+  margin-top: 0.5rem;
+  padding: 1rem 2rem;
+  font-size: 1rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  cursor: pointer;
+}
+
+.btn-submit:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* Responsive */
+@media (max-width: 968px) {
+  .contact-hero {
+    padding: 3rem 0 2rem;
+  }
+
+  .page-title {
+    font-size: 2rem;
+  }
+
+  .contact-grid {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+
+  .contact-info-section {
+    max-width: 100%;
+  }
+
+  .contact-form-section {
+    padding: 2rem;
+  }
+}

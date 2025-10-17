@@ -1,0 +1,129 @@
+/* Place this file at: src/app/gallery/gallery.css */
+
+.gallery-hero {
+  background-color: var(--color-light-gray);
+  padding: 4rem 0 3rem;
+  text-align: center;
+}
+
+.gallery-hero-title {
+  font-size: 2.5rem;
+  color: var(--color-dark);
+  margin-bottom: 1rem;
+}
+
+.gallery-hero-subtitle {
+  font-size: 1.125rem;
+  color: var(--color-gray);
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.gallery-coming-soon {
+  background-color: var(--color-white);
+  min-height: 60vh;
+  display: flex;
+  align-items: center;
+}
+
+.coming-soon-content {
+  max-width: 700px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.coming-soon-icon {
+  width: 120px;
+  height: 120px;
+  background-color: var(--color-light-gray);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-primary);
+  margin: 0 auto 2rem;
+}
+
+.coming-soon-title {
+  font-size: 2.5rem;
+  color: var(--color-dark);
+  margin-bottom: 1.5rem;
+}
+
+.coming-soon-text {
+  font-size: 1.0625rem;
+  color: var(--color-gray);
+  line-height: 1.7;
+  margin-bottom: 1.5rem;
+}
+
+.instagram-cta {
+  margin: 2.5rem 0;
+}
+
+.btn-instagram {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 1rem 2rem;
+  font-size: 1rem;
+  font-weight: 600;
+  background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+  color: var(--color-white);
+  border-radius: var(--border-radius);
+  text-decoration: none;
+  transition: var(--transition);
+  font-family: var(--font-primary);
+}
+
+.btn-instagram:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(188, 24, 136, 0.3);
+}
+
+.join-cta {
+  margin-top: 3rem;
+  padding-top: 2.5rem;
+  border-top: 1px solid var(--color-border);
+}
+
+.join-text {
+  font-size: 1.125rem;
+  color: var(--color-dark);
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .gallery-hero {
+    padding: 3rem 0 2rem;
+  }
+
+  .gallery-hero-title {
+    font-size: 2rem;
+  }
+
+  .coming-soon-icon {
+    width: 100px;
+    height: 100px;
+  }
+
+  .coming-soon-icon svg {
+    width: 48px;
+    height: 48px;
+  }
+
+  .coming-soon-title {
+    font-size: 2rem;
+  }
+
+  .coming-soon-text {
+    font-size: 1rem;
+  }
+
+  .btn-instagram {
+    width: 100%;
+    justify-content: center;
+  }
+}

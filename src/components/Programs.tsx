@@ -1,73 +1,70 @@
 // Place this file at: src/components/Programs.tsx
 
 import Link from 'next/link'
-import { Users, Clock, DollarSign, Award } from 'lucide-react'
+import { Users, Award, Clock } from 'lucide-react'
 import './Programs.css'
 
-interface ProgramFeature {
+interface Program {
   title: string
   description: string
   features: string[]
   icon: JSX.Element
-}
-
-interface PricingInfo {
-  label: string
-  amount: string
+  highlight?: string
 }
 
 export default function Programs(): JSX.Element {
-  const programs: ProgramFeature[] = [
+  const programs: Program[] = [
     {
       title: "Beginner Training",
-      description: "Perfect for those starting their martial arts journey. Learn fundamental techniques, basic forms, and self-defense skills in a supportive environment.",
+      description: "Perfect for those starting their martial arts journey. Learn self-defense, build confidence, and develop fitness in a supportive women-only environment.",
       features: [
+        "Self-defense fundamentals",
         "Basic Tong-Il Moo-Do techniques",
-        "Fundamental stances and movements",
-        "Introduction to self-defense",
-        "Fitness and flexibility training"
+        "Fitness and flexibility training",
+        "Confidence building exercises"
       ],
-      icon: <Users size={32} />
+      icon: <Users size={28} />,
+      highlight: "FREE Trial Available"
     },
     {
       title: "Intermediate Training",
-      description: "For students ready to advance their skills. Focus on advanced techniques, competitive training, and deeper martial arts philosophy.",
+      description: "Advance your skills with competitive training and deeper martial arts mastery. Prepare for regional and international competitions.",
       features: [
         "Advanced forms and patterns",
-        "Sparring techniques",
-        "Competition preparation",
-        "Mental discipline training"
+        "Sparring and competition techniques",
+        "Path to championships",
+        "Mental discipline and strategy"
       ],
-      icon: <Award size={32} />
+      icon: <Award size={28} />
     },
     {
       title: "Private Sessions",
-      description: "One-on-one personalized training tailored to your specific goals. Available for all skill levels with flexible scheduling.",
+      description: "One-on-one personalized training with Kenya's national champion. Tailored to your specific goals with flexible scheduling.",
       features: [
         "Personalized training plan",
-        "Flexible scheduling",
-        "Individual attention",
-        "Faster skill progression"
+        "Flexible scheduling options",
+        "Individual attention from Salma",
+        "Accelerated skill development"
       ],
-      icon: <Clock size={32} />
+      icon: <Clock size={28} />
     }
-  ]
-
-  const pricing: PricingInfo[] = [
-    { label: 'Membership Fee', amount: 'Kshs. 2,500' },
-    { label: 'Monthly Fee', amount: 'Kshs. 1,500' }
   ]
 
   return (
     <section className="programs-section section">
       <div className="container">
-        <h2 className="section-title">Our Training Programs</h2>
-        <p className="section-subtitle">Choose the program that fits your goals and schedule</p>
+        <h2 className="section-title">Training Programs</h2>
+        <p className="section-subtitle">
+          Choose your path to strength, confidence, and self-defense mastery
+        </p>
 
         <div className="programs-grid">
           {programs.map((program, index) => (
             <div key={index} className="program-card">
               <div className="program-icon">{program.icon}</div>
+              {program.highlight && (
+                <div className="program-badge">{program.highlight}</div>
+              )}
               <h3 className="program-title">{program.title}</h3>
               <p className="program-description">{program.description}</p>
               <ul className="program-features">
@@ -79,21 +76,27 @@ export default function Programs(): JSX.Element {
           ))}
         </div>
 
-        <div className="pricing-info">
-          {pricing.map((price, index) => (
-            <div key={index} className="pricing-card">
-              <DollarSign size={24} className="pricing-icon" />
-              <div className="pricing-details">
-                <p className="pricing-label">{price.label}</p>
-                <p className="pricing-amount">{price.amount}</p>
-              </div>
+        <div className="pricing-box">
+          <h3 className="pricing-title">Investment in Your Empowerment</h3>
+          <div className="pricing-details">
+            <div className="pricing-item">
+              <span className="pricing-label">Registration Fee</span>
+              <span className="pricing-amount">Kshs. 2,500</span>
             </div>
-          ))}
+            <div className="pricing-item">
+              <span className="pricing-label">Monthly Training</span>
+              <span className="pricing-amount">Kshs. 1,500</span>
+            </div>
+          </div>
+          <p className="pricing-note">
+            Special founding member rates available for early joiners
+          </p>
         </div>
 
         <div className="programs-cta">
-          <Link href="/programs" className="btn btn-primary">View Full Programs</Link>
-          <Link href="/contact" className="btn btn-secondary">Register Now</Link>
+          <Link href="/contact" className="btn btn-primary">
+            Book Your FREE Trial Class
+          </Link>
         </div>
       </div>
     </section>

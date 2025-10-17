@@ -2,18 +2,37 @@
 
 import Link from 'next/link'
 import Image from 'next/image'
+import { Award, Shield } from 'lucide-react'
 import './About.css'
 
-interface StatItem {
-  number: string
-  label: string
+interface Achievement {
+  icon: JSX.Element
+  title: string
+  description: string
 }
 
 export default function About(): JSX.Element {
-  const stats: StatItem[] = [
-    { number: '5+', label: 'Years Training' },
-    { number: '100+', label: 'Students Trained' },
-    { number: 'Multiple', label: 'Awards Won' }
+  const achievements: Achievement[] = [
+    {
+      icon: <Award size={20} />,
+      title: "2019 World Championship Bronze Medalist",
+      description: "Chung-Ju, South Korea"
+    },
+    {
+      icon: <Award size={20} />,
+      title: "Mashujaa Day 2024 Honoree",
+      description: "Recognized by President William Ruto"
+    },
+    {
+      icon: <Award size={20} />,
+      title: "5x Gold Medalist",
+      description: "Mombasa Open Championships"
+    },
+    {
+      icon: <Shield size={20} />,
+      title: "National Team Captain",
+      description: "Kenya Ladies Tong-Il Moo-Do Team"
+    }
   ]
 
   return (
@@ -23,46 +42,49 @@ export default function About(): JSX.Element {
           <div className="about-image">
             <Image 
               src="/images/salma-portrait.jpg" 
-              alt="Salma Ali - ALMA Founder" 
+              alt="Salma Ali Abdallah - World Championship Bronze Medalist" 
               width={450} 
               height={500}
               className="about-img"
             />
-            <div className="image-badge">
-              <p className="badge-title">Trainer</p>
-              <p className="badge-name">Salma Ali</p>
-              <p className="badge-subtitle">Kenya National Team Captain</p>
+            <div className="image-overlay">
+              <div className="overlay-content">
+                <p className="overlay-title">Salma Ali Abdallah</p>
+                <p className="overlay-subtitle">Kenya National Team Captain</p>
+              </div>
             </div>
           </div>
 
           <div className="about-content">
-            <h2 className="section-title">About ALMA</h2>
+            <h2 className="section-title">Train with Kenya&apos;s Champion</h2>
+            
             <p className="about-text">
-              All Ladies Martial Arts Academy (ALMA) is Mombasa's premier martial arts training center 
-              dedicated exclusively to empowering women through the discipline of Tong-Il Moo-Do, 
-              a Korean martial art that unifies body and mind.
+              <strong>Salma Ali Abdallah</strong> is Kenya&apos;s leading female martial artist and captain 
+              of the national Tong-Il Moo-Do ladies team. With a bronze medal from the 2019 World 
+              Championships in South Korea and five gold medals from the Mombasa Open, Salma brings 
+              world-class expertise to every session.
             </p>
+            
             <p className="about-text">
-              Founded by Salma Ali Abdallah, Kenya's ladies team captain and international bronze medalist, 
-              ALMA provides a safe, supportive environment where women of all ages and skill levels can 
-              develop strength, confidence, and self-defense capabilities.
-            </p>
-            <p className="about-text">
-              Our training philosophy centers on The Triad of Strength, Peace, and Discipline, ensuring 
-              that every student grows not just physically, but mentally and spiritually as well.
+              In 2024, Salma was honored on Mashujaa Day by President William Ruto for her outstanding 
+              contribution to Kenyan sports. Beyond competition, she is passionate about empowering women 
+              through martial arts and actively works to combat gender-based violence.
             </p>
 
-            <div className="about-stats">
-              {stats.map((stat, index) => (
-                <div key={index} className="stat-item">
-                  <p className="stat-number">{stat.number}</p>
-                  <p className="stat-label">{stat.label}</p>
+            <div className="achievements-grid">
+              {achievements.map((achievement, index) => (
+                <div key={index} className="achievement-card">
+                  <div className="achievement-icon">{achievement.icon}</div>
+                  <div className="achievement-content">
+                    <h4 className="achievement-title">{achievement.title}</h4>
+                    <p className="achievement-description">{achievement.description}</p>
+                  </div>
                 </div>
               ))}
             </div>
 
             <Link href="/about" className="btn btn-primary">
-              Learn More About Us
+              Learn More About Salma
             </Link>
           </div>
         </div>
