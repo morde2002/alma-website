@@ -1,0 +1,126 @@
+/* Place this file at: src/components/About.css */
+
+.about-section {
+  background-color: var(--color-white);
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--spacing-xl);
+  align-items: center;
+}
+
+.about-image {
+  position: relative;
+}
+
+.about-img {
+  border-radius: var(--border-radius);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.image-badge {
+  position: absolute;
+  bottom: var(--spacing-md);
+  left: var(--spacing-md);
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  padding: var(--spacing-sm) var(--spacing-md);
+  border-radius: var(--border-radius);
+  box-shadow: 0 4px 12px rgba(233, 30, 140, 0.4);
+}
+
+.badge-title {
+  font-size: var(--font-size-small);
+  opacity: 0.9;
+  margin-bottom: 0;
+}
+
+.badge-name {
+  font-size: var(--font-size-large);
+  font-weight: 700;
+  margin-bottom: var(--spacing-xs);
+}
+
+.badge-subtitle {
+  font-size: var(--font-size-small);
+  color: var(--color-gold);
+  margin-bottom: 0;
+}
+
+.about-content {
+  padding: var(--spacing-md);
+}
+
+.about-text {
+  font-size: var(--font-size-base);
+  color: var(--color-gray);
+  line-height: 1.8;
+  margin-bottom: var(--spacing-md);
+}
+
+.about-stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--spacing-md);
+  margin: var(--spacing-xl) 0;
+  padding: var(--spacing-lg) 0;
+  border-top: 2px solid var(--color-light-gray);
+  border-bottom: 2px solid var(--color-light-gray);
+}
+
+.stat-item {
+  text-align: center;
+}
+
+.stat-number {
+  font-size: var(--font-size-2xl);
+  font-weight: 700;
+  color: var(--color-primary);
+  margin-bottom: var(--spacing-xs);
+}
+
+.stat-label {
+  font-size: var(--font-size-small);
+  color: var(--color-gray);
+  margin-bottom: 0;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .about-grid {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-lg);
+  }
+
+  .about-image {
+    order: -1;
+  }
+
+  .image-badge {
+    bottom: var(--spacing-sm);
+    left: var(--spacing-sm);
+    padding: var(--spacing-xs) var(--spacing-sm);
+  }
+
+  .badge-name {
+    font-size: var(--font-size-base);
+  }
+
+  .about-content {
+    padding: 0;
+  }
+
+  .about-stats {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-sm);
+  }
+
+  .stat-number {
+    font-size: var(--font-size-xl);
+  }
+}
