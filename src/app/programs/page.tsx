@@ -5,6 +5,17 @@ import Footer from '@/components/Footer'
 import Link from 'next/link'
 import { Users, Award, Clock, Check } from 'lucide-react'
 import './programs.css'
+import type { Metadata } from 'next'
+export const metadata: Metadata = {
+  title: 'Martial Arts Programs for Women | ALMA Mombasa',
+  description: 'Explore ALMA\'s martial arts programs: Beginner classes, advanced training, private sessions, and self-defense workshops. All women-only environment with expert instruction. Free trial available.',
+  keywords: 'beginner martial arts women, self defense workshop Mombasa, private martial arts lessons, women fitness Mombasa, martial arts training programs',
+  openGraph: {
+    title: 'ALMA Training Programs',
+    description: 'World-class martial arts training programs designed specifically for women. From beginners to advanced competitors.',
+    images: ['/images/training-og.jpg'],
+  },
+}
 
 export default function ProgramsPage(): JSX.Element {
   const programDetails = [

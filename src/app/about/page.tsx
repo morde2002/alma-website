@@ -6,6 +6,18 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { Award, Target, Heart, Trophy } from 'lucide-react'
 import './about.css'
+import type { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  title: 'About Salma Ali Abdallah | World Championship Medalist & ALMA Founder',
+  description: 'Meet Salma Ali Abdallah, Kenya\'s National Champion and World Championship Bronze Medalist. Learn about her journey from Mombasa to the world stage and her mission to empower women through martial arts.',
+  keywords: 'Salma Ali Abdallah, Kenya martial arts champion, World Championship medalist, Tong-Il Moo-Do champion, women martial arts instructor Mombasa',
+  openGraph: {
+    title: 'About Salma Ali Abdallah - ALMA Founder',
+    description: 'World Championship Bronze Medalist, 5x Mombasa Open Gold Medalist, and Kenya National Team Captain.',
+    images: ['/images/salma-about.jpg'],
+  },
+}
 
 export default function AboutPage(): JSX.Element {
   const achievements = [

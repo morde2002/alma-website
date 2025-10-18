@@ -4,6 +4,17 @@ import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 import { Instagram, Camera } from 'lucide-react'
 import './gallery.css'
+import type { Metadata } from 'next'
+export const metadata: Metadata = {
+  title: 'Gallery - Training & Achievements | ALMA Mombasa',
+  description: 'View photos from ALMA training sessions, competitions, and achievements. See our students in action and the supportive community we\'ve built at Mombasa\'s premier women\'s martial arts academy.',
+  keywords: 'ALMA photos, martial arts training photos Mombasa, women martial arts gallery, Tong-Il Moo-Do training',
+  openGraph: {
+    title: 'ALMA Gallery',
+    description: 'Photos from training sessions, competitions, and community events at ALMA.',
+    images: ['/images/gallery-og.jpg'],
+  },
+}
 
 export default function GalleryPage(): JSX.Element {
   return (

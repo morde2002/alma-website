@@ -69,7 +69,7 @@ export default function Footer(): JSX.Element {
               </li>
               <li>
                 <Mail size={18} />
-                <a href="mailto:info@alma-mombasa.com">info@alma-mombasa.com</a>
+                <a href="mailto:allladiesmartialarts@gmail.com">allladiesmartialarts@gmail.com</a>
               </li>
               <li>
                 <MapPin size={18} />
