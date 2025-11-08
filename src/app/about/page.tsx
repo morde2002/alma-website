@@ -9,12 +9,13 @@ import './about.css'
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'About Salma Ali Abdallah | World Championship Medalist & ALMA Founder',
-  description: 'Meet Salma Ali Abdallah, Kenya\'s National Champion and World Championship Bronze Medalist. Learn about her journey from Mombasa to the world stage and her mission to empower women through martial arts.',
-  keywords: 'Salma Ali Abdallah, Kenya martial arts champion, World Championship medalist, Tong-Il Moo-Do champion, women martial arts instructor Mombasa',
+  title: 'Salma Ali Abdallah | World Championship Medalist & Women\'s Martial Arts Coach Mombasa',
+  description: 'Meet Salma Ali Abdallah - Kenya\'s National Team Captain, World Championship Bronze Medalist, and founder of ALMA. Expert martial arts instructor, self-defense coach, and women\'s fitness trainer in Mombasa empowering female athletes.',
+  keywords: 'Salma Ali Abdallah, Tong-Il Moo-Do champion Kenya, martial arts instructor Mombasa, women self defense coach, women fitness trainer Mombasa, Kenya national team captain martial arts, World Championship medalist Kenya, women empowerment Mombasa, martial arts mentor, female champion coach, Mombasa Open gold medalist, women-only academy founder',
   openGraph: {
-    title: 'About Salma Ali Abdallah - ALMA Founder',
-    description: 'World Championship Bronze Medalist, 5x Mombasa Open Gold Medalist, and Kenya National Team Captain.',
+    title: 'Salma Ali Abdallah - ALMA Founder & World Championship Martial Arts Coach',
+    description: 'World Championship Bronze Medalist | Kenya National Team Captain | 5x Mombasa Open Gold Medalist | Empowering women through world-class martial arts training.',
+    url: 'https://allladiestimd.com/about',
     images: ['/images/salma-about.jpg'],
   },
 }
@@ -142,19 +143,19 @@ export default function AboutPage(): JSX.Element {
             <div className="mission-content">
               <h2 className="mission-title">Why ALMA?</h2>
               <p className="mission-text">
-                All Ladies Martial Arts Academy (ALMA) was founded with a clear mission: to empower 
-                women through martial arts training. In a women-only environment, students build not 
-                just physical strength and self-defense skills, but also confidence, discipline, and 
+                All Ladies Martial Arts Academy (ALMA) was founded with a clear mission: to empower
+                women through martial arts training. In a women-only environment, students build not
+                just physical strength and self-defense skills, but also confidence, discipline, and
                 mental resilience.
               </p>
               <p className="mission-text">
-                Training under a world championship medalist and national team captain, our students 
-                gain access to expertise rarely found outside elite athletic programs. Whether your 
-                goal is self-defense, fitness, competition, or personal growth, ALMA provides the 
+                Training under a world championship medalist and national team captain, our students
+                gain access to expertise rarely found outside elite athletic programs. Whether your
+                goal is <Link href="/programs" style={{color: 'inherit', textDecoration: 'underline'}}>self-defense, fitness, competition, or personal growth</Link>, ALMA provides the
                 foundation for success.
               </p>
               <p className="mission-text">
-                Beyond the dojo, ALMA is committed to combating gender-based violence through practical 
+                Beyond the dojo, ALMA is committed to combating gender-based violence through practical
                 self-defense training and building a supportive community where women lift each other up.
               </p>
               <div className="mission-cta">

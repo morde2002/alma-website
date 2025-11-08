@@ -7,12 +7,13 @@ import { Users, Award, Clock, Check } from 'lucide-react'
 import './programs.css'
 import type { Metadata } from 'next'
 export const metadata: Metadata = {
-  title: 'Martial Arts Programs for Women | ALMA Mombasa',
-  description: 'Explore ALMA\'s martial arts programs: Beginner classes, advanced training, private sessions, and self-defense workshops. All women-only environment with expert instruction. Free trial available.',
-  keywords: 'beginner martial arts women, self defense workshop Mombasa, private martial arts lessons, women fitness Mombasa, martial arts training programs',
+  title: 'Women\'s Martial Arts Programs | Beginner to Advanced Classes in Mombasa, Kenya',
+  description: 'Explore ALMA\'s martial arts programs: Beginner classes, intermediate training, & private sessions for women. Learn self-defense, Tong-Il Moo-Do, fitness & empowerment in a women-only safe environment. Affordable pricing, free trial class available.',
+  keywords: 'women martial arts classes Mombasa, beginner martial arts lessons women, Tong-Il Moo-Do training Kenya, private martial arts coaching, self defense workshop Mombasa, women fitness training programs, martial arts for beginners Kenya, intermediate martial arts classes, women self defense course, affordable martial arts lessons, martial arts academy programs, women-only training classes, martial arts beginner to advanced, fitness classes women Mombasa',
   openGraph: {
-    title: 'ALMA Training Programs',
-    description: 'World-class martial arts training programs designed specifically for women. From beginners to advanced competitors.',
+    title: 'Martial Arts Training Programs | Women-Only Classes in Mombasa',
+    description: 'Beginner, intermediate, and private martial arts programs designed for women. Learn self-defense, Tong-Il Moo-Do, and fitness with expert coaching. Affordable rates and free trial class.',
+    url: 'https://allladiestimd.com/programs',
     images: ['/images/training-og.jpg'],
   },
 }
@@ -98,8 +99,8 @@ export default function ProgramsPage(): JSX.Element {
           <div className="container">
             <h1 className="programs-hero-title">Training Programs</h1>
             <p className="programs-hero-subtitle">
-              World-class martial arts training for women of all levels. From complete beginners to 
-              aspiring champions, we have a program for you.
+              World-class martial arts training for women of all levels. From complete beginners to
+              aspiring champions, we have a program for you. All programs are led by <Link href="/about" style={{color: 'inherit', fontWeight: 'bold'}}>World Championship medalist Salma Ali Abdallah</Link>.
             </p>
           </div>
         </section>

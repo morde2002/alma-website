@@ -79,8 +79,8 @@ export default function Header(): JSX.Element {
               </Link>
             </li>
             <li>
-              <Link 
-                href="/gallery" 
+              <Link
+                href="/gallery"
                 onClick={closeMenu}
                 className={isActive('/gallery') ? 'active-link' : ''}
               >
@@ -88,8 +88,17 @@ export default function Header(): JSX.Element {
               </Link>
             </li>
             <li>
-              <Link 
-                href="/contact" 
+              <Link
+                href="/events"
+                onClick={closeMenu}
+                className={isActive('/events') ? 'active-link' : ''}
+              >
+                Events
+              </Link>
+            </li>
+            <li>
+              <Link
+                href="/contact"
                 onClick={closeMenu}
                 className={isActive('/contact') ? 'active-link' : ''}
               >

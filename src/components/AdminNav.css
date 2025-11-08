@@ -1,0 +1,241 @@
+.admin-nav {
+  background-color: var(--color-white);
+  border-right: 1px solid var(--color-border);
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100vh;
+  width: 280px;
+  display: flex;
+  flex-direction: column;
+  z-index: 1000;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.admin-nav-container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  overflow-y: auto;
+}
+
+.admin-logo {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 1.5rem;
+  text-decoration: none;
+  color: var(--color-dark);
+  border-bottom: 1px solid var(--color-border);
+  transition: var(--transition);
+}
+
+.admin-logo:hover {
+  background-color: var(--color-light-gray);
+}
+
+.admin-logo-icon {
+  font-size: 1.75rem;
+}
+
+.admin-logo-text {
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: var(--color-dark);
+}
+
+.admin-menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--color-dark);
+  padding: 1rem;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 1001;
+}
+
+.admin-nav-links {
+  list-style: none;
+  padding: 1rem 0;
+  margin: 0;
+  flex: 1;
+}
+
+.admin-nav-link {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.875rem 1.5rem;
+  color: var(--color-gray);
+  text-decoration: none;
+  transition: var(--transition);
+  font-weight: 500;
+}
+
+.admin-nav-link:hover {
+  background-color: var(--color-light-gray);
+  color: var(--color-primary);
+}
+
+.admin-nav-link.active {
+  background-color: var(--color-light-gray);
+  color: var(--color-primary);
+  border-left: 4px solid var(--color-primary);
+  padding-left: calc(1.5rem - 4px);
+}
+
+.admin-nav-footer {
+  padding: 1.5rem;
+  border-top: 1px solid var(--color-border);
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  background-color: var(--color-light-gray);
+}
+
+.admin-user-info {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  flex: 1;
+  min-width: 0;
+}
+
+.admin-user-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 1rem;
+  flex-shrink: 0;
+}
+
+.admin-user-details {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  min-width: 0;
+}
+
+.admin-user-email {
+  font-size: 0.8125rem;
+  color: var(--color-dark);
+  font-weight: 600;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.admin-user-role {
+  font-size: 0.75rem;
+  color: var(--color-gray);
+  text-transform: capitalize;
+}
+
+.admin-logout-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--color-gray);
+  padding: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: var(--transition);
+  flex-shrink: 0;
+}
+
+.admin-logout-btn:hover {
+  color: var(--color-primary);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .admin-nav {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: auto;
+    border-right: none;
+    border-bottom: 1px solid var(--color-border);
+    flex-direction: row;
+    justify-content: space-between;
+    z-index: 1000;
+  }
+
+  .admin-nav-container {
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    overflow: visible;
+    padding: 0;
+  }
+
+  .admin-logo {
+    flex: 1;
+    padding: 1rem;
+    border-bottom: none;
+  }
+
+  .admin-menu-toggle {
+    display: block;
+  }
+
+  .admin-nav-links {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    padding: 1rem 0;
+    background-color: var(--color-white);
+    border-bottom: 1px solid var(--color-border);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    margin: 0;
+    flex: unset;
+  }
+
+  .admin-nav-links.active {
+    display: flex;
+  }
+
+  .admin-nav-footer {
+    display: none;
+  }
+
+  .admin-nav-links.active ~ .admin-nav-footer {
+    display: flex;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    border-top: 1px solid var(--color-border);
+    width: 100%;
+    gap: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .admin-nav {
+    height: auto;
+  }
+
+  .admin-logo-text {
+    font-size: 1rem;
+  }
+
+  .admin-user-email {
+    font-size: 0.75rem;
+  }
+}

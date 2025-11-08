@@ -62,10 +62,113 @@ interface RootLayoutProps {
 }
 
 export default function RootLayout({ children }: RootLayoutProps): JSX.Element {
+  // Schema markup for Organization
+  const organizationSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'Organization',
+    name: 'ALMA - All Ladies Martial Arts Academy',
+    alternateName: ['ALMA', 'All Ladies Martial Arts Academy', 'All Ladies Martial Arts'],
+    description: 'Women-only martial arts academy in Mombasa led by World Championship medalist Salma Ali Abdallah',
+    url: 'https://allladiestimd.com',
+    logo: 'https://allladiestimd.com/images/logo.jpg',
+    image: 'https://allladiestimd.com/images/logo.jpg',
+    sameAs: [
+      'https://www.instagram.com',
+      'https://www.facebook.com',
+      'https://www.twitter.com',
+    ],
+    contactPoint: {
+      '@type': 'ContactPoint',
+      contactType: 'Customer Service',
+      availableLanguage: ['en', 'sw'],
+      email: 'contact@allladiestimd.com',
+      areaServed: ['KE', 'ZA'],
+    },
+  };
+
+  // Schema markup for Local Business
+  const localBusinessSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'LocalBusiness',
+    '@id': 'https://allladiestimd.com',
+    name: 'ALMA - All Ladies Martial Arts Academy',
+    description: 'Mombasa\'s premier women-only martial arts academy. Learn self-defense, Tong-Il Moo-Do with World Championship medalist Salma Ali Abdallah.',
+    image: 'https://allladiestimd.com/images/logo.jpg',
+    url: 'https://allladiestimd.com',
+    telephone: '+254',
+    email: 'contact@allladiestimd.com',
+    address: {
+      '@type': 'PostalAddress',
+      streetAddress: 'Swahilipot Hub',
+      addressLocality: 'Mombasa',
+      addressRegion: 'Coast',
+      postalCode: '80100',
+      addressCountry: 'KE',
+    },
+    areaServed: {
+      '@type': 'City',
+      name: 'Mombasa',
+    },
+    geo: {
+      '@type': 'GeoCoordinates',
+      latitude: '-4.0435',
+      longitude: '39.6682',
+    },
+    sameAs: [
+      'https://www.instagram.com',
+      'https://www.facebook.com',
+    ],
+    priceRange: 'KES1500-KES2500',
+  };
+
+  // Schema markup for BreadcrumbList (for site navigation)
+  const breadcrumbSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      {
+        '@type': 'ListItem',
+        position: 1,
+        name: 'Home',
+        item: 'https://allladiestimd.com',
+      },
+      {
+        '@type': 'ListItem',
+        position: 2,
+        name: 'About',
+        item: 'https://allladiestimd.com/about',
+      },
+      {
+        '@type': 'ListItem',
+        position: 3,
+        name: 'Programs',
+        item: 'https://allladiestimd.com/programs',
+      },
+      {
+        '@type': 'ListItem',
+        position: 4,
+        name: 'Contact',
+        item: 'https://allladiestimd.com/contact',
+      },
+    ],
+  };
+
   return (
     <html lang="en">
       <head>
-        {/* Additional meta tags if needed */}
+        {/* Schema.org structured data markup */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+        />
       </head>
       <body>{children}</body>
     </html>

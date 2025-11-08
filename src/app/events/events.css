@@ -1,0 +1,523 @@
+/* Events Page Styles */
+
+/* Event Selection */
+.event-selection {
+  background-color: var(--color-white);
+  padding: 2rem 0;
+  border-bottom: 1px solid var(--color-border);
+  margin-bottom: 2rem;
+}
+
+.year-selector-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.year-select-label {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--color-dark);
+  white-space: nowrap;
+}
+
+.year-select-dropdown {
+  padding: 0.75rem 1.25rem;
+  background-color: var(--color-white);
+  color: var(--color-dark);
+  border: 2px solid var(--color-primary);
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 600;
+  font-family: var(--font-primary);
+  transition: var(--transition);
+  min-width: 180px;
+  appearance: none;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23E91E8C' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-position: right 0.75rem center;
+  background-size: 1.25rem;
+  padding-right: 2.5rem;
+}
+
+.year-select-dropdown:hover {
+  background-color: var(--color-light-gray);
+  box-shadow: 0 2px 8px rgba(233, 30, 140, 0.2);
+}
+
+.year-select-dropdown:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(233, 30, 140, 0.1);
+}
+
+.year-select-dropdown option {
+  background-color: var(--color-white);
+  color: var(--color-dark);
+  padding: 0.75rem;
+}
+
+.year-select-dropdown option:checked {
+  background: linear-gradient(var(--color-primary), var(--color-primary));
+  background-color: var(--color-primary);
+  color: var(--color-white);
+}
+
+/* Event Hero Section */
+.event-hero {
+  background-color: var(--color-light-gray);
+  padding: 3rem 0;
+}
+
+.event-hero-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: center;
+}
+
+.event-hero-title {
+  font-size: 2rem;
+  color: var(--color-dark);
+  margin-bottom: 1rem;
+  line-height: 1.3;
+}
+
+.event-hero-subtitle {
+  font-size: 1.25rem;
+  color: var(--color-primary);
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+}
+
+.event-hero-text {
+  font-size: 1.0625rem;
+  color: var(--color-gray);
+  line-height: 1.7;
+  margin-bottom: 2rem;
+}
+
+.event-quick-info {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.quick-info-item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: 1rem;
+  color: var(--color-dark);
+  font-weight: 500;
+}
+
+.quick-info-item svg {
+  color: var(--color-primary);
+  flex-shrink: 0;
+}
+
+.event-hero-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.event-hero-img {
+  border-radius: var(--border-radius);
+  width: 100%;
+  height: auto;
+  max-width: 350px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Countdown Section */
+.countdown-section {
+  background-color: var(--color-white);
+}
+
+.countdown-display {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  background: linear-gradient(135deg, var(--color-light-gray), var(--color-white));
+  padding: 2rem;
+  border-radius: var(--border-radius);
+  border: 2px solid var(--color-primary);
+  flex-wrap: wrap;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.countdown-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: var(--color-white);
+  padding: 1.25rem 1rem;
+  border-radius: var(--border-radius);
+  border: 1px solid var(--color-border);
+  min-width: 80px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.countdown-value {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--color-primary);
+  line-height: 1;
+}
+
+.countdown-label {
+  font-size: 0.75rem;
+  color: var(--color-gray);
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  text-align: center;
+}
+
+.countdown-divider {
+  font-size: 2rem;
+  color: var(--color-primary);
+  font-weight: 700;
+  margin: 0 0.5rem;
+}
+
+/* Highlights Section */
+.highlights-section {
+  background-color: var(--color-light-gray);
+}
+
+.highlights-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+.highlight-card {
+  background-color: var(--color-white);
+  padding: 2rem;
+  border-radius: var(--border-radius);
+  border: 1px solid var(--color-border);
+  text-align: center;
+  transition: var(--transition);
+}
+
+.highlight-card:hover {
+  border-color: var(--color-primary);
+  transform: translateY(-4px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.highlight-icon {
+  width: 70px;
+  height: 70px;
+  background-color: var(--color-primary);
+  border-radius: var(--border-radius);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-white);
+  margin: 0 auto 1.5rem;
+}
+
+.highlight-title {
+  font-size: 1.25rem;
+  color: var(--color-dark);
+  margin-bottom: 0.75rem;
+  font-weight: 600;
+}
+
+.highlight-description {
+  font-size: 0.95rem;
+  color: var(--color-gray);
+  margin: 0;
+  line-height: 1.6;
+}
+
+/* Event Details Section */
+.event-details-section {
+  background-color: var(--color-white);
+}
+
+.details-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+.detail-card {
+  background-color: var(--color-light-gray);
+  padding: 2rem;
+  border-radius: var(--border-radius);
+  border: 1px solid var(--color-border);
+  border-left: 4px solid var(--color-primary);
+  transition: var(--transition);
+}
+
+.detail-card:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.detail-title {
+  font-size: 1.25rem;
+  color: var(--color-dark);
+  margin: 0 0 0.75rem 0;
+  font-weight: 600;
+}
+
+.detail-content {
+  font-size: 1.125rem;
+  color: var(--color-primary);
+  font-weight: 600;
+  margin: 0 0 0.75rem 0;
+}
+
+.detail-description {
+  font-size: 0.95rem;
+  color: var(--color-gray);
+  margin: 0;
+  line-height: 1.6;
+}
+
+/* ALMA Connection Section */
+.alma-connection-section {
+  background-color: var(--color-light-gray);
+}
+
+.connection-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.connection-title {
+  font-size: 2rem;
+  color: var(--color-dark);
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.connection-text {
+  font-size: 1.0625rem;
+  color: var(--color-gray);
+  line-height: 1.8;
+  margin-bottom: 1.5rem;
+}
+
+.connection-cta {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 2.5rem;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .event-hero-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .event-hero-image {
+    order: -1;
+  }
+
+  .event-hero-title {
+    font-size: 1.75rem;
+  }
+
+  .countdown-display {
+    padding: 1.5rem;
+    gap: 0.5rem;
+  }
+
+  .countdown-box {
+    padding: 1rem 0.75rem;
+    min-width: 70px;
+  }
+
+  .countdown-value {
+    font-size: 1.75rem;
+  }
+
+  .countdown-divider {
+    font-size: 1.25rem;
+    margin: 0 0.25rem;
+  }
+
+  .highlights-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .details-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .connection-cta {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .connection-cta .btn {
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .event-hero {
+    padding: 2rem 0;
+  }
+
+  .event-hero-title {
+    font-size: 1.5rem;
+  }
+
+  .event-hero-subtitle {
+    font-size: 1.0625rem;
+  }
+
+  .event-hero-text {
+    font-size: 0.95rem;
+  }
+
+  .event-hero-img {
+    max-width: 300px;
+  }
+
+  .highlight-card {
+    padding: 1.5rem;
+  }
+
+  .detail-card {
+    padding: 1.5rem;
+  }
+
+  .details-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .event-hero {
+    padding: 1.5rem 0;
+  }
+
+  .event-hero-grid {
+    gap: 1.5rem;
+  }
+
+  .event-hero-title {
+    font-size: 1.35rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .event-hero-subtitle {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .event-hero-text {
+    font-size: 0.9rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .quick-info-item {
+    font-size: 0.9rem;
+  }
+
+  .countdown-display {
+    padding: 1rem;
+    gap: 0.2rem;
+    border: 1px solid var(--color-primary);
+  }
+
+  .countdown-box {
+    padding: 0.75rem 0.5rem;
+    min-width: 55px;
+  }
+
+  .countdown-value {
+    font-size: 1.35rem;
+  }
+
+  .countdown-label {
+    font-size: 0.65rem;
+  }
+
+  .countdown-divider {
+    font-size: 1rem;
+    margin: 0 0.1rem;
+  }
+
+  .highlights-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .highlight-card {
+    padding: 1.25rem;
+  }
+
+  .highlight-icon {
+    width: 55px;
+    height: 55px;
+  }
+
+  .highlight-icon svg {
+    width: 26px;
+    height: 26px;
+  }
+
+  .highlight-title {
+    font-size: 1.125rem;
+  }
+
+  .event-hero-img {
+    max-width: 280px;
+  }
+
+  .connection-title {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .connection-text {
+    font-size: 0.95rem;
+    margin-bottom: 1.25rem;
+  }
+
+  .detail-card {
+    padding: 1.25rem;
+  }
+
+  .detail-title {
+    font-size: 1.1rem;
+  }
+
+  .detail-content {
+    font-size: 1rem;
+  }
+
+  .year-selector-wrapper {
+    flex-direction: column;
+    width: 100%;
+    gap: 0.75rem;
+  }
+
+  .year-select-label {
+    width: 100%;
+    text-align: left;
+    font-size: 0.9rem;
+  }
+
+  .year-select-dropdown {
+    width: 100%;
+    min-width: unset;
+    font-size: 0.95rem;
+  }
+}
