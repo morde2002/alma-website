@@ -36,6 +36,7 @@
 
 .btn-add:hover {
   background-color: #d1198a;
+  color: var(--color-white);
   transform: translateY(-2px);
 }
 

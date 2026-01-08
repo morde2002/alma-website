@@ -52,6 +52,7 @@
 }
 
 .btn-add-user:hover:not(:disabled) {
+  color: white;
   opacity: 0.9;
   transform: translateY(-2px);
 }
@@ -148,6 +149,7 @@
 }
 
 .btn-create:hover:not(:disabled) {
+  color: white;
   opacity: 0.9;
   transform: translateY(-2px);
 }
@@ -288,6 +290,7 @@
 }
 
 .btn-delete:hover:not(:disabled) {
+  color: white;
   opacity: 0.9;
   transform: translateY(-2px);
 }

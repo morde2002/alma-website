@@ -81,7 +81,7 @@ a {
   transition: var(--transition);
 }
 
-a:hover {
+a:hover:not(.btn) {
   color: var(--color-dark);
 }
 
@@ -111,6 +111,7 @@ a:hover {
 
 .btn-primary:hover {
   background-color: #d1198a;
+  color: var(--color-white);
   transform: translateY(-1px);
 }
 
@@ -122,6 +123,7 @@ a:hover {
 
 .btn-secondary:hover {
   background-color: var(--color-light-gray);
+  color: var(--color-dark);
   border-color: var(--color-dark);
 }
 

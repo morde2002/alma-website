@@ -142,6 +142,24 @@
     grid-template-columns: 1fr;
   }
 
+  .program-card {
+    text-align: center;
+  }
+
+  .program-icon {
+    margin: 0 auto 1.5rem;
+  }
+
+  .program-badge {
+    display: block;
+    width: fit-content;
+    margin: 0 auto 1rem;
+  }
+
+  .program-features li {
+    text-align: left;
+  }
+
   .pricing-details {
     flex-direction: column;
     gap: 1.5rem;

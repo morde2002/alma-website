@@ -7,12 +7,12 @@ import { Users, Award, Clock, Check } from 'lucide-react'
 import './programs.css'
 import type { Metadata } from 'next'
 export const metadata: Metadata = {
-  title: 'Women\'s Martial Arts Programs | Beginner to Advanced Classes in Mombasa, Kenya',
-  description: 'Explore ALMA\'s martial arts programs: Beginner classes, intermediate training, & private sessions for women. Learn self-defense, Tong-Il Moo-Do, fitness & empowerment in a women-only safe environment. Affordable pricing, free trial class available.',
-  keywords: 'women martial arts classes Mombasa, beginner martial arts lessons women, Tong-Il Moo-Do training Kenya, private martial arts coaching, self defense workshop Mombasa, women fitness training programs, martial arts for beginners Kenya, intermediate martial arts classes, women self defense course, affordable martial arts lessons, martial arts academy programs, women-only training classes, martial arts beginner to advanced, fitness classes women Mombasa',
+  title: 'Ladies Martial Arts Programs | Ladies Karate & Self-Defense Classes Mombasa Kenya - ALMA',
+  description: 'Explore ALMA\'s ladies martial arts programs: Beginner ladies karate, intermediate training, & private ladies self-defense sessions. Learn ladies martial arts, karate, fighting & Tong-Il Moo-Do in a women-only safe environment. Serving Mombasa, Kilifi, Kwale & Coast Region. Affordable pricing, free trial class!',
+  keywords: 'ladies martial arts programs, ladies martial arts classes Mombasa, ladies karate classes, ladies self defense classes, female martial arts programs, ladies fighting classes, women martial arts classes Kenya, beginner ladies martial arts, ladies karate lessons, ladies Tong-Il Moo-Do training, private ladies martial arts coaching, ladies self defense workshop, women fitness training Mombasa, ladies martial arts beginner, ladies martial arts intermediate, affordable ladies martial arts, ladies martial arts Coast region, girls martial arts classes, ladies karate beginner, ladies self defense course',
   openGraph: {
-    title: 'Martial Arts Training Programs | Women-Only Classes in Mombasa',
-    description: 'Beginner, intermediate, and private martial arts programs designed for women. Learn self-defense, Tong-Il Moo-Do, and fitness with expert coaching. Affordable rates and free trial class.',
+    title: 'Ladies Martial Arts Programs | Ladies Karate & Self-Defense Classes Mombasa',
+    description: 'Beginner, intermediate, and private ladies martial arts programs. Learn ladies karate, self-defense, and Tong-Il Moo-Do with expert coaching. Affordable rates and free trial class.',
     url: 'https://allladiestimd.com/programs',
     images: ['/images/training-og.jpg'],
   },

@@ -183,6 +183,7 @@ textarea {
 }
 
 .remove-image-btn:hover {
+  color: white;
   opacity: 0.9;
   transform: translateY(-2px);
 }
@@ -363,6 +364,7 @@ textarea {
 }
 
 .btn-next:hover {
+  color: white;
   opacity: 0.9;
   transform: translateY(-2px);
 }
@@ -374,6 +376,7 @@ textarea {
 }
 
 .btn-publish-nav:hover:not(:disabled) {
+  color: white;
   opacity: 0.9;
   transform: translateY(-2px);
 }
@@ -414,6 +417,7 @@ textarea {
 }
 
 .btn-publish:hover:not(:disabled) {
+  color: white;
   opacity: 0.9;
   transform: translateY(-2px);
 }

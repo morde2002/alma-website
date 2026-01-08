@@ -8,46 +8,22 @@ import Link from 'next/link'
 import { Calendar, MapPin, Users, Trophy } from 'lucide-react'
 import './events.css'
 
-interface CountdownData {
-  days: number
-  hours: number
-  minutes: number
-  seconds: number
-}
-
 export default function EventsContent(): JSX.Element {
-  const [countdown, setCountdown] = useState<CountdownData>({
-    days: 0,
-    hours: 0,
-    minutes: 0,
-    seconds: 0
-  })
   const [isLoaded, setIsLoaded] = useState<boolean>(false)
 
-  // Countdown timer
   useEffect(() => {
-    const calculateCountdown = (): void => {
-      const eventDate = new Date('2025-12-10T00:00:00').getTime()
-      const now = new Date().getTime()
-      const timeRemaining = eventDate - now
-
-      if (timeRemaining > 0) {
-        const days = Math.floor(timeRemaining / (1000 * 60 * 60 * 24))
-        const hours = Math.floor((timeRemaining % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60))
-        const minutes = Math.floor((timeRemaining % (1000 * 60 * 60)) / (1000 * 60))
-        const seconds = Math.floor((timeRemaining % (1000 * 60)) / 1000)
-
-        setCountdown({ days, hours, minutes, seconds })
-      } else {
-        setCountdown({ days: 0, hours: 0, minutes: 0, seconds: 0 })
-      }
-    }
-
-    calculateCountdown()
     setIsLoaded(true)
 
-    const interval = setInterval(calculateCountdown, 1000)
-    return () => clearInterval(interval)
+    // Handle scroll to anchor after page loads
+    const hash = window.location.hash
+    if (hash) {
+      setTimeout(() => {
+        const element = document.querySelector(hash)
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth', block: 'start' })
+        }
+      }, 100)
+    }
   }, [])
 
   const eventHighlights = [
@@ -119,29 +95,94 @@ export default function EventsContent(): JSX.Element {
           </div>
         </section>
 
-        {/* Countdown Section */}
-        <section className="countdown-section section">
+        {/* Championship Results Section */}
+        <section className="results-section section">
           <div className="container">
-            <h2 className="section-title">Time Until Championship</h2>
-            <div className="countdown-display">
-              <div className="countdown-box">
-                <div className="countdown-value">{countdown.days}</div>
-                <div className="countdown-label">Days</div>
+            <h2 className="section-title">Championship Results</h2>
+            <p className="section-subtitle">
+              The 12th Mombasa Open Tong-Il Moo-Do Championship concluded successfully on December 23, 2025
+            </p>
+            <div className="results-summary">
+              <div className="result-highlight">
+                <Trophy size={48} style={{ color: '#E91E8C' }} />
+                <h3>Kenya Dominates Championship</h3>
+                <p>
+                  Kenya&apos;s national team, Jasiri, delivered an outstanding performance, completing a clean sweep
+                  of the podium in multiple categories including the Female Sparring (6-13 years) division.
+                </p>
               </div>
-              <div className="countdown-divider">:</div>
-              <div className="countdown-box">
-                <div className="countdown-value">{String(countdown.hours).padStart(2, '0')}</div>
-                <div className="countdown-label">Hours</div>
+            </div>
+          </div>
+        </section>
+
+        {/* Zahra Khamis Spotlight Section */}
+        <section id="zahra-spotlight" className="zahra-section section">
+          <div className="container">
+            <div className="zahra-grid">
+              <div className="zahra-image-wrapper">
+                <Image
+                  src="/images/zahra-khamis.png"
+                  alt="Zahra Khamis - Bronze Medalist at Mombasa Open Championship 2025"
+                  width={500}
+                  height={600}
+                  className="zahra-image"
+                  style={{ objectFit: 'cover' }}
+                />
               </div>
-              <div className="countdown-divider">:</div>
-              <div className="countdown-box">
-                <div className="countdown-value">{String(countdown.minutes).padStart(2, '0')}</div>
-                <div className="countdown-label">Minutes</div>
-              </div>
-              <div className="countdown-divider">:</div>
-              <div className="countdown-box">
-                <div className="countdown-value">{String(countdown.seconds).padStart(2, '0')}</div>
-                <div className="countdown-label">Seconds</div>
+              <div className="zahra-content">
+                <div className="zahra-badge">ALMA Rising Star</div>
+                <h2 className="zahra-title">Zahra Khamis</h2>
+                <h3 className="zahra-subtitle">Double Bronze Medalist</h3>
+
+                <div className="achievement-highlight">
+                  <Trophy size={32} style={{ color: '#CD7F32' }} />
+                  <div>
+                    <p className="achievement-date">December 15, 2025</p>
+                    <p className="achievement-text">
+                      Zahra Khamis shone at the 12th Mombasa Open Tong-Il Moo-Do Championship,
+                      earning <strong>TWO Bronze Medals</strong> in the junior female sparring category (ages 6-13).
+                    </p>
+                  </div>
+                </div>
+
+                <div className="zahra-story">
+                  <h4>A Rising Champion&apos;s Journey</h4>
+                  <p>
+                    Under the expert coaching of ALMA founder and World Championship medalist
+                    <strong> Salma Ali Abdallah</strong>, Zahra has blossomed into one of Kenya&apos;s most
+                    promising young martial artists. Her double bronze medal achievement at the prestigious
+                    Mombasa Open Championship showcases the world-class training and mentorship available
+                    at ALMA.
+                  </p>
+                  <p>
+                    Competing against international athletes at the Aga Khan Academy Multi-Purpose Hall,
+                    Zahra demonstrated exceptional skill, discipline, and the fighting spirit that defines
+                    ALMA&apos;s training philosophy. Her success contributed to Kenya&apos;s dominant performance,
+                    with the national team completing a clean sweep of the podium in the female sparring division.
+                  </p>
+                  <p>
+                    Zahra&apos;s achievement is a testament to what dedicated young women can accomplish with
+                    proper training, expert mentorship, and a supportive community. At ALMA, we&apos;re proud
+                    to nurture the next generation of champions while empowering women through martial arts.
+                  </p>
+                </div>
+
+                <div className="zahra-cta">
+                  <h4>Train Like a Champion</h4>
+                  <p>
+                    Learn from the same World Championship coach who trained Zahra Khamis to become
+                    a double medalist. Whether you&apos;re a beginner or aspiring competitor, ALMA provides
+                    the expert coaching and supportive environment to help you reach your full potential.
+                  </p>
+                  <div className="cta-buttons">
+                    <Link href="/programs" className="btn btn-primary">
+                      View Training Programs
+                    </Link>
+                    <Link href="/contact" className="btn btn-secondary">
+                      Start Your Free Trial
+                    </Link>
+                  </div>
+                </div>
               </div>
             </div>
           </div>

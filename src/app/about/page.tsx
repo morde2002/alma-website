@@ -9,12 +9,12 @@ import './about.css'
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Salma Ali Abdallah | World Championship Medalist & Women\'s Martial Arts Coach Mombasa',
-  description: 'Meet Salma Ali Abdallah - Kenya\'s National Team Captain, World Championship Bronze Medalist, and founder of ALMA. Expert martial arts instructor, self-defense coach, and women\'s fitness trainer in Mombasa empowering female athletes.',
-  keywords: 'Salma Ali Abdallah, Tong-Il Moo-Do champion Kenya, martial arts instructor Mombasa, women self defense coach, women fitness trainer Mombasa, Kenya national team captain martial arts, World Championship medalist Kenya, women empowerment Mombasa, martial arts mentor, female champion coach, Mombasa Open gold medalist, women-only academy founder',
+  title: 'Salma Ali Abdallah | World Championship Medalist & Ladies Martial Arts Coach Mombasa Kenya',
+  description: 'Meet Salma Ali Abdallah - Kenya\'s National Team Captain, World Championship Bronze Medalist, and founder of ALMA ladies martial arts academy. Expert ladies martial arts instructor, self-defense coach, and women\'s fitness trainer in Mombasa empowering female athletes across Kenya and East Africa.',
+  keywords: 'Salma Ali Abdallah, ladies martial arts coach, ladies martial arts instructor Mombasa, Tong-Il Moo-Do champion Kenya, ladies self defense coach, women martial arts instructor, female martial arts coach, Kenya national team captain martial arts, World Championship medalist Kenya, ladies karate instructor, women empowerment Mombasa, martial arts mentor women, female champion coach, Mombasa Open gold medalist, ladies martial arts academy founder, women-only academy founder',
   openGraph: {
-    title: 'Salma Ali Abdallah - ALMA Founder & World Championship Martial Arts Coach',
-    description: 'World Championship Bronze Medalist | Kenya National Team Captain | 5x Mombasa Open Gold Medalist | Empowering women through world-class martial arts training.',
+    title: 'Salma Ali Abdallah - ALMA Founder & World Championship Ladies Martial Arts Coach',
+    description: 'World Championship Bronze Medalist | Kenya National Team Captain | 5x Mombasa Open Gold Medalist | Empowering women through world-class ladies martial arts training.',
     url: 'https://allladiestimd.com/about',
     images: ['/images/salma-about.jpg'],
   },

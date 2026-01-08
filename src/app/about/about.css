@@ -187,6 +187,10 @@
     order: -1;
   }
 
+  .about-hero-content {
+    text-align: center;
+  }
+
   .about-hero-title {
     font-size: 2rem;
   }
@@ -194,6 +198,7 @@
   .timeline-item {
     flex-direction: column;
     gap: 1rem;
+    text-align: center;
   }
 
   .timeline-year {
@@ -202,5 +207,13 @@
 
   .values-grid {
     grid-template-columns: 1fr;
+  }
+
+  .value-card {
+    text-align: center;
+  }
+
+  .mission-text {
+    text-align: center;
   }
 }

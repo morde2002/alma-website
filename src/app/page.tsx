@@ -5,18 +5,18 @@ import Footer from '@/components/Footer'
 import Hero from '@/components/Hero'
 import About from '@/components/About'
 import Programs from '@/components/Programs'
-import UpcomingEvent from '@/components/UpcomingEvent'
+import EventResults from '@/components/EventResults'
 import WhyChooseUs from '@/components/WhyChooseUs'
 import CallToAction from '@/components/CallToAction'
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'ALMA - All Ladies Martial Arts Academy | Women\'s Martial Arts & Self-Defense in Mombasa, Kenya',
-  description: 'Join Mombasa\'s premier women-only martial arts academy. Learn self-defense, Tong-Il Moo-Do, fitness training & women empowerment with World Championship medalist Salma Ali Abdallah. Affordable classes, free trial available.',
-  keywords: 'women martial arts Mombasa, ladies martial arts Kenya, self defense women, Tong-Il Moo-Do Mombasa, women fitness training, women empowerment Mombasa, ladies self defense classes, women-only academy Kenya, martial arts for women, Salma Ali champion, ALMA academy, self defense workshop Mombasa, women martial arts beginner, ladies martial arts intermediate',
+  title: 'Ladies Martial Arts Mombasa | Women\'s Self-Defense & Karate Classes Kenya - ALMA Academy',
+  description: 'Join Mombasa\'s premier ladies martial arts academy. Women-only self-defense, karate, ladies fighting & Tong-Il Moo-Do classes with World Championship medalist Salma Ali Abdallah. Serving Mombasa, Kilifi, Kwale & Coast Region. Free trial available!',
+  keywords: 'ladies martial arts, ladies martial arts Mombasa, ladies martial arts Kenya, female martial arts, ladies self defense, ladies karate, ladies self defense classes, women martial arts Mombasa, ladies fighting classes, women self defense Kenya, girls martial arts, ladies karate classes, female martial arts training, women karate Kenya, martial arts for ladies, self defense classes for women, ladies Tong-Il Moo-Do, women empowerment Mombasa, ladies martial arts Coast region, martial arts East Africa, women-only martial arts, ALMA Academy Mombasa, ladies self defense workshop',
   openGraph: {
-    title: 'ALMA - All Ladies Martial Arts Academy | Women\'s Empowerment Through Martial Arts',
-    description: 'Empowering women through martial arts, fitness & self-defense training in Mombasa. World-class coaching from a World Championship medalist. Women-only safe environment.',
+    title: 'Ladies Martial Arts Mombasa | Women\'s Self-Defense & Karate - ALMA Academy',
+    description: 'Premier ladies martial arts academy empowering women through self-defense, karate & Tong-Il Moo-Do training in Mombasa, Kenya. World-class coaching, women-only safe environment.',
     url: 'https://allladiestimd.com',
     images: ['/images/alma-og.jpg'],
   },
@@ -30,7 +30,7 @@ export default function Home(): JSX.Element {
         <Hero />
         <About />
         <Programs />
-        <UpcomingEvent />
+        <EventResults />
         <WhyChooseUs />
         <CallToAction />
       </main>

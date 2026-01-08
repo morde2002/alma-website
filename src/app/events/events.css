@@ -521,3 +521,331 @@
     font-size: 0.95rem;
   }
 }
+
+/* Championship Results Section */
+.results-section {
+  background-color: var(--color-white);
+}
+
+.results-summary {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.result-highlight {
+  background-color: var(--color-light-gray);
+  padding: 2.5rem;
+  border-radius: var(--border-radius);
+  border-left: 4px solid var(--color-primary);
+  text-align: center;
+}
+
+.result-highlight svg {
+  margin-bottom: 1.5rem;
+}
+
+.result-highlight h3 {
+  font-size: 1.5rem;
+  color: var(--color-dark);
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+.result-highlight p {
+  font-size: 1.0625rem;
+  color: var(--color-gray);
+  line-height: 1.7;
+  margin: 0;
+}
+
+/* Zahra Khamis Spotlight Section */
+.zahra-section {
+  background-color: var(--color-white);
+  padding: 4rem 0;
+}
+
+.zahra-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  gap: 3rem;
+  align-items: flex-start;
+}
+
+.zahra-image-wrapper {
+  position: sticky;
+  top: 2rem;
+  align-self: start;
+  overflow: hidden;
+}
+
+.zahra-image {
+  border-radius: var(--border-radius);
+  width: 100%;
+  height: auto;
+}
+
+.zahra-content {
+  padding: 0;
+}
+
+.zahra-badge {
+  display: inline-block;
+  background: linear-gradient(135deg, var(--color-primary), #d61a7f);
+  color: var(--color-white);
+  padding: 0.5rem 1.25rem;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 1.5rem;
+}
+
+.zahra-title {
+  font-size: 2.25rem;
+  color: var(--color-dark);
+  margin: 0 0 0.5rem 0;
+  font-weight: 700;
+}
+
+.zahra-subtitle {
+  font-size: 1.25rem;
+  color: var(--color-primary);
+  margin: 0 0 2rem 0;
+  font-weight: 600;
+}
+
+.achievement-highlight {
+  padding: 0 0 1.5rem 0;
+  display: flex;
+  gap: 1.25rem;
+  align-items: flex-start;
+  margin-bottom: 2rem;
+}
+
+.achievement-date {
+  font-size: 0.9rem;
+  color: var(--color-gray);
+  font-weight: 600;
+  margin: 0 0 0.5rem 0;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.achievement-text {
+  font-size: 1rem;
+  color: var(--color-dark);
+  line-height: 1.6;
+  margin: 0;
+}
+
+.zahra-story {
+  margin-bottom: 2rem;
+}
+
+.zahra-story h4 {
+  font-size: 1.35rem;
+  color: var(--color-dark);
+  margin: 0 0 1rem 0;
+  font-weight: 600;
+}
+
+.zahra-story p {
+  font-size: 1rem;
+  color: var(--color-gray);
+  line-height: 1.8;
+  margin-bottom: 1.25rem;
+}
+
+.zahra-cta {
+  padding: 2rem 0;
+  margin-top: 2rem;
+}
+
+.zahra-cta h4 {
+  font-size: 1.35rem;
+  color: var(--color-dark);
+  margin: 0 0 1rem 0;
+  font-weight: 600;
+  text-align: center;
+}
+
+.zahra-cta > p {
+  font-size: 0.95rem;
+  color: var(--color-gray);
+  line-height: 1.7;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.cta-buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* Responsive Styles for New Sections */
+@media (max-width: 1024px) {
+  .zahra-grid {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+
+  .zahra-image-wrapper {
+    position: relative;
+    max-width: 400px;
+    margin: 0 auto;
+  }
+
+  .zahra-content {
+    text-align: center;
+  }
+
+  .zahra-badge {
+    display: block;
+    width: fit-content;
+    margin: 0 auto 1.5rem;
+  }
+
+  .zahra-story p {
+    text-align: center;
+  }
+
+  .result-highlight {
+    padding: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .zahra-section {
+    padding: 3rem 0;
+  }
+
+  .zahra-image-wrapper {
+    max-width: 350px;
+  }
+
+  .zahra-content {
+    padding: 0;
+    text-align: center;
+  }
+
+  .zahra-title {
+    font-size: 1.85rem;
+    text-align: center;
+  }
+
+  .zahra-subtitle {
+    font-size: 1.1rem;
+    text-align: center;
+  }
+
+  .zahra-badge {
+    display: block;
+    width: fit-content;
+    margin: 0 auto 1.5rem;
+  }
+
+  .achievement-highlight {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .zahra-story h4 {
+    font-size: 1.2rem;
+    text-align: center;
+  }
+
+  .zahra-story p {
+    text-align: center;
+  }
+
+  .zahra-cta {
+    padding: 1.5rem 0;
+  }
+
+  .zahra-cta h4 {
+    font-size: 1.2rem;
+  }
+
+  .cta-buttons {
+    flex-direction: column;
+  }
+
+  .cta-buttons .btn {
+    width: 100%;
+  }
+
+  .result-highlight {
+    padding: 1.5rem;
+  }
+
+  .result-highlight h3 {
+    font-size: 1.25rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .zahra-image-wrapper {
+    max-width: 300px;
+  }
+
+  .zahra-content {
+    padding: 0;
+    text-align: center;
+  }
+
+  .zahra-title {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+
+  .zahra-subtitle {
+    font-size: 1rem;
+    text-align: center;
+  }
+
+  .zahra-badge {
+    width: fit-content;
+    margin: 0 auto 1.5rem;
+  }
+
+  .achievement-highlight {
+    padding: 0 0 1.25rem 0;
+  }
+
+  .zahra-story h4 {
+    text-align: center;
+  }
+
+  .zahra-story p {
+    font-size: 0.95rem;
+    text-align: center;
+  }
+
+  .zahra-cta {
+    padding: 1.25rem 0;
+  }
+
+  .zahra-cta h4 {
+    text-align: center;
+  }
+
+  .zahra-cta > p {
+    text-align: center;
+  }
+
+  .result-highlight {
+    padding: 1.25rem;
+  }
+
+  .result-highlight h3 {
+    font-size: 1.1rem;
+  }
+
+  .result-highlight p {
+    font-size: 0.95rem;
+  }
+}

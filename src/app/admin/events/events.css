@@ -37,6 +37,7 @@
 
 .btn-add-event:hover {
   background-color: #d1198a;
+  color: var(--color-white);
   transform: translateY(-2px);
   box-shadow: 0 4px 12px rgba(233, 30, 140, 0.3);
 }

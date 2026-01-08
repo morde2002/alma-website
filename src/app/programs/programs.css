@@ -189,7 +189,20 @@
 
   .program-detail-header {
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
+    text-align: center;
+  }
+
+  .program-detail-info {
+    text-align: center;
+  }
+
+  .program-meta {
+    justify-content: center;
+  }
+
+  .program-detail-description {
+    text-align: center;
   }
 
   .program-detail-title {
@@ -199,6 +212,16 @@
   .program-detail-grid {
     grid-template-columns: 1fr;
     gap: 2rem;
+  }
+
+  .curriculum-section,
+  .outcomes-section {
+    text-align: center;
+  }
+
+  .detail-list {
+    text-align: left;
+    display: inline-block;
   }
 
   .pricing-cards {
