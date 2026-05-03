@@ -1,7 +1,7 @@
 // Place this file at: src/app/contact/ContactForm.tsx
 
 'use client'
-import { useState, useRef } from 'react'
+import { useState, useRef, useEffect } from 'react'
 import { Phone, Mail, MapPin, Clock, Send, CheckCircle, XCircle } from 'lucide-react'
 import emailjs from '@emailjs/browser'
 import PhoneInput from 'react-phone-input-2'
@@ -16,8 +16,17 @@ interface FormData {
   program: string
 }
 
+const MIN_FILL_MS = 2000
+
 export default function ContactForm(): JSX.Element {
   const formRef = useRef<HTMLFormElement>(null)
+  const mountedAtRef = useRef<number>(0)
+  const honeypotRef = useRef<HTMLInputElement>(null)
+
+  useEffect(() => {
+    mountedAtRef.current = Date.now()
+  }, [])
+
   const [formData, setFormData] = useState<FormData>({
     name: '',
     email: '',
@@ -151,9 +160,42 @@ export default function ContactForm(): JSX.Element {
     }
   }
 
+  const notifyWhatsApp = (data: FormData): void => {
+    const phone = process.env.NEXT_PUBLIC_CALLMEBOT_PHONE
+    const apiKey = process.env.NEXT_PUBLIC_CALLMEBOT_APIKEY
+    if (!phone || !apiKey) return
+
+    const lines = [
+      '*New ALMA contact form submission*',
+      `Name: ${data.name}`,
+      `Email: ${data.email}`,
+      `Phone: ${data.phone}`,
+      `Program: ${data.program}`,
+      data.message ? `Message: ${data.message}` : '',
+    ].filter(Boolean)
+
+    const url =
+      `https://api.callmebot.com/whatsapp.php` +
+      `?phone=${encodeURIComponent(phone)}` +
+      `&text=${encodeURIComponent(lines.join('\n'))}` +
+      `&apikey=${encodeURIComponent(apiKey)}`
+
+    fetch(url, { method: 'GET', mode: 'no-cors' }).catch(() => {})
+  }
+
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>): Promise<void> => {
     e.preventDefault()
-    
+
+    const honeypotFilled = (honeypotRef.current?.value ?? '') !== ''
+    const tooFast = Date.now() - mountedAtRef.current < MIN_FILL_MS
+    if (honeypotFilled || tooFast) {
+      setSubmitStatus('success')
+      setTimeout(() => {
+        window.location.reload()
+      }, 4000)
+      return
+    }
+
     if (emailValidation.isValid === false) {
       setSubmitStatus('error')
       setTimeout(() => setSubmitStatus(''), 3000)
@@ -182,6 +224,7 @@ export default function ContactForm(): JSX.Element {
       )
 
       if (result.text === 'OK') {
+        notifyWhatsApp(formData)
         setSubmitStatus('success')
         setTimeout(() => {
           window.location.reload()
@@ -265,6 +308,29 @@ export default function ContactForm(): JSX.Element {
             <h2 className="form-title">Book Your FREE Trial Class</h2>
 
             <form ref={formRef} onSubmit={handleSubmit} className="contact-form">
+              <div
+                aria-hidden="true"
+                style={{
+                  position: 'absolute',
+                  left: '-10000px',
+                  top: 'auto',
+                  width: '1px',
+                  height: '1px',
+                  overflow: 'hidden',
+                }}
+              >
+                <label htmlFor="website">Website (leave blank)</label>
+                <input
+                  ref={honeypotRef}
+                  type="text"
+                  id="website"
+                  name="website"
+                  tabIndex={-1}
+                  autoComplete="off"
+                  defaultValue=""
+                />
+              </div>
+
               <div className="form-group">
                 <label htmlFor="name">Full Name *</label>
                 <input
