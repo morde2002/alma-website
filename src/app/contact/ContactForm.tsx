@@ -161,26 +161,11 @@ export default function ContactForm(): JSX.Element {
   }
 
   const notifyWhatsApp = (data: FormData): void => {
-    const phone = process.env.NEXT_PUBLIC_CALLMEBOT_PHONE
-    const apiKey = process.env.NEXT_PUBLIC_CALLMEBOT_APIKEY
-    if (!phone || !apiKey) return
-
-    const lines = [
-      '*New ALMA contact form submission*',
-      `Name: ${data.name}`,
-      `Email: ${data.email}`,
-      `Phone: ${data.phone}`,
-      `Program: ${data.program}`,
-      data.message ? `Message: ${data.message}` : '',
-    ].filter(Boolean)
-
-    const url =
-      `https://api.callmebot.com/whatsapp.php` +
-      `?phone=${encodeURIComponent(phone)}` +
-      `&text=${encodeURIComponent(lines.join('\n'))}` +
-      `&apikey=${encodeURIComponent(apiKey)}`
-
-    fetch(url, { method: 'GET', mode: 'no-cors' }).catch(() => {})
+    fetch('/api/contact-notify', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(data),
+    }).catch(() => {})
   }
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>): Promise<void> => {
