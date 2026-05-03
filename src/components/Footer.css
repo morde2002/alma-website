@@ -166,15 +166,15 @@
   margin-top: 0.5rem;
 }
 
-.credit-link {
-  color: var(--color-primary);
+.footer .credit-link {
+  color: var(--color-primary) !important;
   font-weight: 600;
   text-decoration: none;
   transition: var(--transition);
 }
 
-.credit-link:hover {
-  color: var(--color-white);
+.footer .credit-link:hover {
+  color: var(--color-white) !important;
   text-decoration: underline;
 }
 

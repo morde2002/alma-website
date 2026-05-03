@@ -282,7 +282,7 @@ export default function ContactForm(): JSX.Element {
                 </div>
                 <div className="detail-content">
                   <h4>Training Hours</h4>
-                  <p>Monday, Wednesday, Friday</p>
+                  <p>Monday to Friday</p>
                   <p className="detail-note">6:00 PM - 7:30 PM</p>
                 </div>
               </div>
@@ -290,7 +290,7 @@ export default function ContactForm(): JSX.Element {
           </div>
 
           <div className="contact-form-section">
-            <h2 className="form-title">Book Your FREE Trial Class</h2>
+            <h2 className="form-title">Book Your First Class</h2>
 
             <form ref={formRef} onSubmit={handleSubmit} className="contact-form">
               <div
@@ -442,7 +442,7 @@ export default function ContactForm(): JSX.Element {
 
               {submitStatus === 'success' && (
                 <div className="success-message-bottom">
-                  <p>✓ Thank you! Your message has been sent successfully. We&apos;ll contact you soon to confirm your trial class.</p>
+                  <p>✓ Thank you! Your message has been sent successfully. We&apos;ll contact you soon to confirm your registration.</p>
                   <p className="refresh-note">Refreshing page...</p>
                 </div>
               )}

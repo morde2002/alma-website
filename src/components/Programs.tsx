@@ -24,7 +24,7 @@ export default function Programs(): JSX.Element {
         "Confidence building exercises"
       ],
       icon: <Users size={28} />,
-      highlight: "FREE Trial Available"
+      highlight: "Beginner Friendly"
     },
     {
       title: "Intermediate Training",
@@ -95,7 +95,7 @@ export default function Programs(): JSX.Element {
 
         <div className="programs-cta">
           <Link href="/contact" className="btn btn-primary">
-            Book Your FREE Trial Class
+            Book Your First Class
           </Link>
         </div>
       </div>

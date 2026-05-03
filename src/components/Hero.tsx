@@ -27,14 +27,34 @@ export default function Hero(): JSX.Element {
                 <span>5x Gold Medalist</span>
               </div>
               <div className="feature-item">
-                <span className="feature-icon">🇰🇪</span>
+                <span className="feature-icon" aria-hidden="true">
+                  <svg
+                    viewBox="0 0 36 24"
+                    width="28"
+                    height="19"
+                    xmlns="http://www.w3.org/2000/svg"
+                    role="img"
+                    aria-label="Kenya flag"
+                  >
+                    <rect width="36" height="6" fill="#000000" />
+                    <rect y="6" width="36" height="2" fill="#FFFFFF" />
+                    <rect y="8" width="36" height="8" fill="#BB0000" />
+                    <rect y="16" width="36" height="2" fill="#FFFFFF" />
+                    <rect y="18" width="36" height="6" fill="#006600" />
+                    <ellipse cx="18" cy="12" rx="3.5" ry="6" fill="#FFFFFF" />
+                    <ellipse cx="18" cy="12" rx="2.5" ry="5" fill="#BB0000" />
+                    <ellipse cx="18" cy="12" rx="1" ry="3" fill="#000000" />
+                    <line x1="13" y1="6" x2="23" y2="18" stroke="#FFFFFF" strokeWidth="0.7" />
+                    <line x1="23" y1="6" x2="13" y2="18" stroke="#FFFFFF" strokeWidth="0.7" />
+                  </svg>
+                </span>
                 <span>Kenya National Team Captain</span>
               </div>
             </div>
 
             <div className="hero-buttons">
               <Link href="/contact" className="btn btn-primary">
-                Book Your FREE Trial Class
+                Book Your First Class
               </Link>
               <Link href="/about" className="btn btn-secondary">
                 Meet Your Trainer
@@ -44,7 +64,7 @@ export default function Hero(): JSX.Element {
             <div className="hero-info">
               <div className="info-box">
                 <span className="info-label">Training Days</span>
-                <span className="info-value">Mon, Wed, Fri</span>
+                <span className="info-value">Mon - Fri</span>
               </div>
               <div className="info-box">
                 <span className="info-label">Time</span>

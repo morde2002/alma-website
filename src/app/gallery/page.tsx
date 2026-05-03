@@ -64,7 +64,7 @@ export default function GalleryPage(): JSX.Element {
                   Want to be part of our story? Join ALMA and appear in our growing gallery!
                 </p>
                 <a href="/contact" className="btn btn-primary">
-                  Book Your FREE Trial Class
+                  Book Your First Class
                 </a>
               </div>
             </div>

@@ -8,11 +8,11 @@ import './programs.css'
 import type { Metadata } from 'next'
 export const metadata: Metadata = {
   title: 'Ladies Martial Arts Programs | Ladies Karate & Self-Defense Classes Mombasa Kenya - ALMA',
-  description: 'Explore ALMA\'s ladies martial arts programs: Beginner ladies karate, intermediate training, & private ladies self-defense sessions. Learn ladies martial arts, karate, fighting & Tong-Il Moo-Do in a women-only safe environment. Serving Mombasa, Kilifi, Kwale & Coast Region. Affordable pricing, free trial class!',
+  description: 'Explore ALMA\'s ladies martial arts programs: Beginner ladies karate, intermediate training, & private ladies self-defense sessions. Learn ladies martial arts, karate, fighting & Tong-Il Moo-Do in a women-only safe environment. Serving Mombasa, Kilifi, Kwale & Coast Region. Affordable pricing — register today!',
   keywords: 'ladies martial arts programs, ladies martial arts classes Mombasa, ladies karate classes, ladies self defense classes, female martial arts programs, ladies fighting classes, women martial arts classes Kenya, beginner ladies martial arts, ladies karate lessons, ladies Tong-Il Moo-Do training, private ladies martial arts coaching, ladies self defense workshop, women fitness training Mombasa, ladies martial arts beginner, ladies martial arts intermediate, affordable ladies martial arts, ladies martial arts Coast region, girls martial arts classes, ladies karate beginner, ladies self defense course',
   openGraph: {
     title: 'Ladies Martial Arts Programs | Ladies Karate & Self-Defense Classes Mombasa',
-    description: 'Beginner, intermediate, and private ladies martial arts programs. Learn ladies karate, self-defense, and Tong-Il Moo-Do with expert coaching. Affordable rates and free trial class.',
+    description: 'Beginner, intermediate, and private ladies martial arts programs. Learn ladies karate, self-defense, and Tong-Il Moo-Do with expert coaching. Affordable rates — register today.',
     url: 'https://allladiestimd.com/programs',
     images: ['/images/training-og.jpg'],
   },
@@ -173,7 +173,7 @@ export default function ProgramsPage(): JSX.Element {
             </p>
             <div className="pricing-cta">
               <Link href="/contact" className="btn btn-primary">
-                Book Your FREE Trial Class
+                Book Your First Class
               </Link>
             </div>
           </div>

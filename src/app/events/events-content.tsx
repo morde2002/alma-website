@@ -179,7 +179,7 @@ export default function EventsContent(): JSX.Element {
                       View Training Programs
                     </Link>
                     <Link href="/contact" className="btn btn-secondary">
-                      Start Your Free Trial
+                      Book Your First Class
                     </Link>
                   </div>
                 </div>

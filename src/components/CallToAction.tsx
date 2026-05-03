@@ -12,14 +12,14 @@ export default function CallToAction(): JSX.Element {
           
           <h2 className="cta-title">Ready to Start Your Journey?</h2>
           <p className="cta-subtitle">
-            Join ALMA today and be part of Mombasa&apos;s premier women&apos;s martial arts community. 
-            Your first class is FREE, no experience necessary!
+            Join ALMA today and be part of Mombasa&apos;s premier women&apos;s martial arts community.
+            All skill levels welcome — no experience necessary!
           </p>
 
           <div className="cta-buttons">
             <Link href="/contact" className="btn btn-primary btn-large">
               <Calendar size={20} />
-              Book Your FREE Trial Class
+              Book Your First Class
             </Link>
             <Link href="/contact" className="btn btn-secondary btn-large">
               <Phone size={20} />

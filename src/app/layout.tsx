@@ -203,7 +203,7 @@ export default function RootLayout({ children }: RootLayoutProps): JSX.Element {
         name: 'Is there a ladies self-defense class in Mombasa?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'Yes! ALMA offers comprehensive ladies self-defense classes in Mombasa. Our women-only academy provides practical self-defense training, ladies karate, and martial arts skills taught by Kenya\'s National Team Captain and World Championship medalist. Free trial classes available.',
+          text: 'Yes! ALMA offers comprehensive ladies self-defense classes in Mombasa. Our women-only academy provides practical self-defense training, ladies karate, and martial arts skills taught by Kenya\'s National Team Captain and World Championship medalist. Register today to begin training.',
         },
       },
       {
@@ -211,7 +211,7 @@ export default function RootLayout({ children }: RootLayoutProps): JSX.Element {
         name: 'How much does ladies martial arts training cost in Mombasa?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'ALMA offers affordable ladies martial arts training with a one-time registration fee of Kshs. 2,500 (includes uniform) and monthly training at Kshs. 1,500 for unlimited class access. We also offer a free trial class for new students.',
+          text: 'ALMA offers affordable ladies martial arts training with a one-time registration fee of Kshs. 2,500 (includes uniform) and monthly training at Kshs. 1,500 for unlimited class access. Contact us to register and begin your training.',
         },
       },
       {
